@@ -5,4 +5,5 @@
 - firmware [package]
 - kernel [package]
 - package dependency [feature]
+- binary repository [feature]
 
