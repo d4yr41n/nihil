@@ -1,0 +1,19 @@
+ver=5.2.15
+url=https://mirrors.dotsrc.org/gnu/bash/bash-$ver.tar.gz
+
+
+install() {
+    mkdir -p usr
+    usr=$(realpath usr)
+    mkdir -p src
+    cd src
+    wget $url
+    tar xf $(basename $url)
+    cd bash-$ver
+    CFLAGS="-static" ./configure --prefix=$usr
+    make -j $(nproc) install
+}
+
+
+$1
+

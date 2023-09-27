@@ -1,0 +1,13 @@
+url=https://github.com/DavHau/nix-portable/releases/download/v009/nix-portable
+
+
+install() {
+    mkdir -p usr/bin
+    cd usr/bin
+    wget $url
+    chmod +x nix-portable
+}
+
+
+$1
+

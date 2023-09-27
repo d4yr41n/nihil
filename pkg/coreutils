@@ -1,0 +1,19 @@
+ver=9.4
+url=https://mirrors.dotsrc.org/gnu/coreutils/coreutils-$ver.tar.xz
+
+
+install() {
+    mkdir -p usr
+    usr=$(realpath usr)
+    mkdir -p src
+    cd src
+    wget $url
+    tar xf $(basename $url)
+    cd coreutils-$ver
+    CFLAGS="-static" ./configure --prefix=$usr
+    make -j $(nproc) install
+}
+
+
+$1
+

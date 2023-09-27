@@ -1,0 +1,16 @@
+url=git://git.suckless.org/sinit
+
+
+install() {
+    mkdir -p usr
+    usr=$(realpath usr)
+    mkdir -p src
+    cd src
+    git clone git://git.suckless.org/sinit
+    cd sinit
+    make PREFIX=$usr -j $(nproc) install
+}
+
+
+$1
+
