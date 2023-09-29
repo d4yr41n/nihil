@@ -1,15 +1,20 @@
-## TODO
+### Usage
 
-### Packages
-- wpa_supplicant
-- text editor
-- git
-- firmware
-- kernel
-- nix
-- guix
+Install package
+```sh
+./pkg/<name> install
+```
 
-## Features
-- package dependency
-- binary repository
+### TODO
+
+- wpa_supplicant [package]
+- text editor [package]
+- git [package]
+- firmware [package]
+- kernel [package]
+- nix [package]
+- guix [package]
+- package dependency [feature]
+- binary repository [feature]
+- comprehensive examples [readme]
 
